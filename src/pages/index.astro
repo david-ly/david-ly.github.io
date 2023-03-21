@@ -17,28 +17,26 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     <div class="text-3xl py-3 font-bold">Software Engineer</div>
     <div class="py-2">
       <text class="text-lg">
-        I manage this website mostly as a respository of interesting information
-        pertaining to myself. Credits to @manuelernestog for the template which
-        I adapted my site from, you can navigate to the project's GitHub page
-        using the button below.
+        I manage this website mostly as a respository of relevant information
+        pertaining to myself. Credits to <a
+          href="https://twitter.com/manuelernestog">@manuelernestog</a
+        > for the template which I adapted my site from, you can navigate to the
+        project's GitHub page using the button below.
       </text>
     </div>
     <div class="mt-8">
-      <!-- <a class="btn" href="https://twitter.com/manuelernestog" target="_blank">
-        Let's connect!</a
-      > -->
       <a
         href="https://github.com/manuelernestog/astro-modern-personal-website"
         target="_blank"
         class="btn btn-outline ml-5"
       >
-        Get This template</a
-      >
+        Get This template
+      </a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">Portfolio Projects{"</>"}</div>
   </div>
 
   <HorizontalCard
@@ -46,14 +44,13 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     img="/post_img.webp"
     desc="Self-explanatory project inspired by and pulling from m4tt72's base project found here: https://github.com/m4tt72/terminal/tree/master"
     url="#"
-    badge="NEW"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="ANSI Rendered JSON Resume/CV"
+    img="/ancv_example.png"
+    desc="Personalized CV (Curriculum Vitae) following the JSON resume schema [jsonresume.org] and built to be rendered based on the [ancv.io] project. Try it out for yourself by running `curl -L https://ancv.io/david-ly`"
+    url="https://github.com/david-ly/ancv-resume-json"
   />
   <!-- <div class="divider my-0"></div>
   <HorizontalCard
