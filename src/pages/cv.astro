@@ -3,19 +3,43 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title="Resume">
+<BaseLayout title="Experience">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+    <div class="text-3xl w-full font-bold">Background</div>
   </div>
 
   <div class="mb-10 text-justify">
     Software Engineer with ~3 years of industry experience mainly focused on
-    web-based backend work in distributed systems consisting of a variety of
-    languages and technologies such as JavaScript (Node.js), Go(lang),
-    Terraform, Kubernetes, Docker, Redis, MongoDB, Elasticsearch, and message
-    queues like Kafka or RabbitMQ.
+    web-based backend work involving distributed systems (k8s), message queues,
+    RESTful APIs, NoSQL databases, Redis (mem)caching, and Elasticsearch.
   </div>
 
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Software Engineer II"
+      subtitle="Jan 2022 - Jun 2022 @ LogDNA (n.k.a. Mezmo)"
+      desc="Refactored alerting microservice (send functionality with integrations for platforms like PagerDuty), contributed to building a provisioning API intended for enterprise b2b use, worked on our custom Terraform provider/plugin to enable IaC workflows for product features"
+    />
+    <TimeLineElement
+      title="Software Engineer I"
+      subtitle="Jan 2020 - Dec 2021 @ LogDNA (n.k.a. Mezmo)"
+      desc="Fulfilled on-call developer duties, pushed for adoption of RESTful API best practices, kickstarted alignment with OpenAPI/Swagger standards, contributed to upgrading from Elasticsearch 5.x -> 7.x, led development & documentation efforts for feature release of our export API v2"
+    />
+    <TimeLineElement
+      title="Software Engineering Intern"
+      subtitle="May 2019 - Aug 2019 @ LogDNA (n.k.a. Mezmo)"
+      desc="Targeted observability into backend system via instrumenting Prometheus/OpenMetrics clients, modularized archiving functionality to various storage providers (AWS S3, Azure Blob, IBM-COS, etc), and initiated product offering integration with AWS Marketplace SaaS"
+    />
+    <TimeLineElement
+      title="Software Engineering Intern"
+      subtitle="Jun 2017 - Aug 2017 @ LogDNA (n.k.a. Mezmo)"
+      desc="Developed a diagnostic dashboard to help boost sales team productivity, built a tool to streamline target acquisition & lead generation, created batch jobs to automate tasks on a regular basis"
+    />
+  </div>
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
   </div>
@@ -29,33 +53,6 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       title="Minor in Computer Science"
       subtitle="2015 to 2019 @ University of California, Berkeley"
     />
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
-
-  <div class="time-line-container mb-10">
-    <!-- <TimeLineElement
-      title="UI Designer and Developer at Integral Access Control System (Thesis)"
-      subtitle="From 2015 at XETID, Habana, Cuba"
-      desc="System multiplatform that includes the steps of a company's personnel, the structure and composition thereof, as well as a powerful designer of credentials and module of control of access. Outspread at the MINFAR and another entities of the country. Technologies: C++, Qt Framework, Subversión, Visual Paradigm, PostgreSQL, Jmeter"
-    />
-    <TimeLineElement
-      title="Web Developer at Integral Oil Drilling System 2.0"
-      subtitle="From 2015 to 2016 at CEDIN, UCI, Habana, Cuba"
-      desc="System of steps of process of perforation of oil wells. Outspread in the direction of Intervención of Wells and various wells of drilling of the Occident of the country. Generate reports and graphs of process of perforation making use of data mining. Technologies: Php,Symfony 2.7 , Subversión, PostgreSQL, HigthChart, Ireport, Boostrap 2, JQuery, HTML,CSS, JavaScript"
-    />
-    <TimeLineElement
-      title="Full Stack Dev, Software Architect and Project Leader at Integral Oil Drilling System 3.0"
-      subtitle="From 2016 to 2017 at CEDIN, UCI, Habana, Cuba"
-      desc="System of steps of process of perforation of oil wells. Outspread in the direction of Intervención of Wells and various wells of drilling of the Occident of the country. Generate reports and graphs of process of perforation making use of data mining. Technologies: Php,Symfony 2.8 , Gitlab, PostgreSQL, HigthChart, Boostrap 2, JQuery, HTML,CSS, JavaScript"
-    />
-    <TimeLineElement
-      title="Full Stack Dev, UI/UX Designer and Software Architect at Primary Information System"
-      subtitle="From 2017 to 2018 at CEDIN, UCI, Habana, Cuba"
-      desc="System of steps of primary information at a company. personnel's steps, control of access, impression of credentials, steps of locales, structure and composition. Technologies: Php,Symfony 3.3 , Gitlab, PostgreSQL, , Boostrap 3, JQuery, HTML,CSS, JavaScript"
-    /> -->
   </div>
 
   <!-- <div class="mb-5">
