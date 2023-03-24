@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-Adapted from [@manuelernestog](https://twitter.com/manuelernestog)'s [Astro Modern Personal Website]([https://](https://github.com/manuelernestog/astro-modern-personal-website)) template and tailored with personalized information. My site (<https://davidmacly.dev>) is hosted on GitHub Pages in this very repository and configured with a custom domain registered via [Google Domains](https://google.domains).
+Adapted from [@manuelernestog](https://twitter.com/manuelernestog)'s [Astro Modern Personal Website](https://github.com/manuelernestog/astro-modern-personal-website) template and tailored with personalized information. My site (<https://davidmacly.dev>) is hosted on GitHub Pages in this very repository and configured with a custom domain registered via [Google Domains](https://domains.google).
 
 ## Tech Stack
 
