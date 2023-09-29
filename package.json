@@ -1,6 +1,6 @@
 {
   "name": "david-ly-github-io",
-  "description": "Astro Modern personal website template with Project Section, CV Section, Paginated Blog, Shop, RSS Feed, SEO Friendly, Visual themes and Responsive Desing.",
+  "description": "Portfolio adapted from the Astro Modern Personal Website template created by Manuel Ernestog w/ Project Section, CV Section, Paginated Blog, Shop, RSS Feed, SEO Optimization, Visual Themes and Responsive Design.",
   "type": "module",
   "version": "2.1.1",
   "scripts": {
