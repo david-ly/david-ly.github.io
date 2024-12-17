@@ -1,4 +1,4 @@
-import { z, defineCollection } from "astro:content";
+import { z, defineCollection } from "astro:content"
 
 const blogSchema = z.object({
     title: z.string()
@@ -6,7 +6,7 @@ const blogSchema = z.object({
     , pubDate: z.coerce.date()
     , updatedDate: z.string().optional()
     , heroImage: z.string().optional(),
-});
+})
 
 // const storeSchema = z.object({
 //     title: z.string(),
@@ -25,7 +25,7 @@ const blogSchema = z.object({
 export type BlogSchema = z.infer<typeof blogSchema>;
 // export type StoreSchema = z.infer<typeof storeSchema>;
 
-const blogCollection = defineCollection({ schema: blogSchema });
+const blogCollection = defineCollection({ schema: blogSchema })
 // const storeCollection = defineCollection({ schema: storeSchema });
 
 export const collections = {

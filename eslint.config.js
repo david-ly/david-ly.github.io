@@ -25,8 +25,9 @@ export default [
     rules: {
       'comma-style': ['error', 'first']
     , 'comma-spacing': ['error', {before: false, after: true}]
+    , 'semi': ['error', 'never']
     }
   }
   , js.configs.recommended
   , ...ts.configs.recommended
-];
+]
