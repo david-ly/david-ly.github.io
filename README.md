@@ -8,8 +8,7 @@ Adapted from [@manuelernestog](https://twitter.com/manuelernestog)'s [Astro Mode
 - [Tailwind CSS](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 
-<!-- ## Project Strucutre
-
+<!-- ## Project Structure
 
 ``` php
 ├── src/

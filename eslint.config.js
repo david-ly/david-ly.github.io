@@ -7,6 +7,18 @@ const {browser, node} = globals
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
+    files: ["**/*"]
+  , ignores: [
+      ".astro/*"
+    , "node_modules/*"
+    , "dist/*"
+    ]
+  , rules: {
+      'eol-last': ['error', 'always']
+    , 'linebreak-style': ['error', 'unix']
+    }
+  }
+, {
     ignores: [".astro/*"]
   }
 , {
