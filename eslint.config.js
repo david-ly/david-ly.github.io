@@ -1,6 +1,6 @@
-import globals from "globals"
-import js from "@eslint/js"
-import ts from "typescript-eslint"
+import globals from 'globals'
+import js from '@eslint/js'
+import ts from 'typescript-eslint'
 
 const {browser, node} = globals
 
@@ -12,6 +12,10 @@ const RULES_ALL = {
 const RULES_JS = {
   'comma-style': ['error', 'first']
 , 'comma-spacing': ['error', {before: false, after: true}]
+, 'quotes': ['error', 'single', {
+    avoidEscape: true
+  , allowTemplateLiterals: true
+  }]
 , 'semi': ['error', 'never']
 }
 

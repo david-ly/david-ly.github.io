@@ -1,4 +1,4 @@
-import { z, defineCollection } from "astro:content"
+import { z, defineCollection } from 'astro:content'
 
 const blogSchema = z.object({
     title: z.string()
