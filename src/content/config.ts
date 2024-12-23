@@ -1,11 +1,11 @@
 import { z, defineCollection } from 'astro:content'
 
-const blogSchema = z.object({
+const schema_blog = z.object({
     title: z.string()
     , description: z.string()
-    , pubDate: z.coerce.date()
-    , updatedDate: z.string().optional()
-    , heroImage: z.string().optional(),
+    , pub_date: z.coerce.date()
+    , updated_date: z.string().optional()
+    , hero_image: z.string().optional(),
 })
 
 // const storeSchema = z.object({
@@ -14,21 +14,21 @@ const blogSchema = z.object({
 //     details: z.boolean().optional(),
 //     custom_link_label: z.string(),
 //     custom_link: z.string().optional(),
-//     updatedDate: z.coerce.date(),
+//     updated_date: z.coerce.date(),
 //     pricing: z.string().optional(),
 //     oldPricing:  z.string().optional(),
 //     badge: z.string().optional(),
 //     checkoutUrl: z.string().optional(),
-//     heroImage: z.string().optional(),
+//     hero_image: z.string().optional(),
 // });
 
-export type BlogSchema = z.infer<typeof blogSchema>;
-// export type StoreSchema = z.infer<typeof storeSchema>;
+export type BlogSchema = z.infer<typeof schema_blog>
+// export type StoreSchema = z.infer<typeof storeSchema>
 
-const blogCollection = defineCollection({ schema: blogSchema })
+const collection_blog = defineCollection({ schema: schema_blog })
 // const storeCollection = defineCollection({ schema: storeSchema });
 
 export const collections = {
-    blog: blogCollection,
+    blog: collection_blog,
     // 'store': storeCollection
 }

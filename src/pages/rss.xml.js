@@ -3,8 +3,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
 
 export const get = () =>
 	rss({
-		title: SITE_TITLE
-		, description: SITE_DESCRIPTION
-		, site: import.meta.env.SITE
-		, items: import.meta.glob('./blog/**/*.md'),
+		description: SITE_DESCRIPTION
+	, items: import.meta.glob('./blog/**/*.md')
+	, site: import.meta.env.SITE
+	, title: SITE_TITLE
 	})
