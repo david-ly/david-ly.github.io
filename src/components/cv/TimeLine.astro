@@ -1,5 +1,5 @@
 ---
-const { title, subtitle, bullets = [] } = Astro.props;
+const { title, subtitle, bullets = [] } = Astro.props
 ---
 
 <div class="flex">
@@ -13,7 +13,7 @@ const { title, subtitle, bullets = [] } = Astro.props;
     <h3 class="font-semibold mb-1">{title}</h3>
     <span class="font-light text-sm">{subtitle}</span>
     <ul class="list-disc md:columns-1 mx-4">
-      {bullets.map((bullet) => <li>{bullet}</li>)}
+      {bullets.map((bullet: string) => <li>{bullet}</li>)}
     </ul>
     <br />
   </div>

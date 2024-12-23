@@ -1,34 +1,34 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import TimeLineElement from "../components/cv/TimeLine.astro";
+import BaseLayout from '../layouts/BaseLayout.astro'
+import TimeLineElement from '../components/cv/TimeLine.astro'
 
 const swe2_2022 = [
   // "Drafted an agile epic (via Jira) to scope out the necessary steps to instrument a durable queue at each stage of the data pipeline",
-  "Tackled the refactor of the alerting microservice (send functionality) for integrations with services like OpsGenie, PagerDuty, etc",
-  "Aided in building a fully fledged provisioning API, spurred by & intended for enterprise b2b use, which aligned with simultaneous RBAC efforts to scaffold a hierarchical organizational structure",
-  "Worked on our custom Terraform provider/plugin to add support for Slack alerting integration & aligned its resources for consistency with the views/alerts API schema + parity with CRUD operations",
-];
+  'Tackled the refactor of the alerting microservice (send functionality) for integrations with services like OpsGenie, PagerDuty, etc'
+  , 'Aided in building a fully fledged provisioning API, spurred by & intended for enterprise b2b use, which aligned with simultaneous RBAC efforts to scaffold a hierarchical organizational structure'
+  , 'Worked on our custom Terraform provider/plugin to add support for Slack alerting integration & aligned its resources for consistency with the views/alerts API schema + parity with CRUD operations'
+,]
 const swe1_2020 = [
-  "Fulfilled on-call developer duties by debugging culpable code, releasing hot-fixes, rolling back faulty deploys, & pushed for the adoption of a new rotation system to more evenly distribute the workload",
-  "Advocated for the adoption of RESTful API best practices & standardization across development/documentation by instrumenting Swagger(hub) tooling in alignment with the OpenAPI specification",
-  "Contributed to efforts involving the migration & upgrade of our system(s) from Elasticsearch version: 5.x -> 7.x entailing the refactor of numerous services/jobs to facilitate the transition from tribe nodes to cross-cluster search & account for changes in the ES API + Query DSL",
-  "Led development + documentation efforts for the feature release of our Export API v2 allowing users to export their logs as JSON; this leveraged the `search_after` parameter of Elasticsearch's API to provide native support of deep pagination functionality thru queried results",
-];
+  'Fulfilled on-call developer duties by debugging culpable code, releasing hot-fixes, rolling back faulty deploys, & pushed for the adoption of a new rotation system to more evenly distribute the workload'
+  , 'Advocated for the adoption of RESTful API best practices & standardization across development/documentation by instrumenting Swagger(hub) tooling in alignment with the OpenAPI specification'
+  , 'Contributed to efforts involving the migration & upgrade of our system(s) from Elasticsearch version: 5.x -> 7.x entailing the refactor of numerous services/jobs to facilitate the transition from tribe nodes to cross-cluster search & account for changes in the ES API + Query DSL'
+  , "Led development + documentation efforts for the feature release of our Export API v2 allowing users to export their logs as JSON; this leveraged the `search_after` parameter of Elasticsearch's API to provide native support of deep pagination functionality thru queried results"
+,]
 const intern_2019 = [
-  "Targeted monitoring/observability into backend systems via instrumentation of Prometheus clients to emit OpenMetrics",
-  "Implemented & modularized archiving functionality to various storage providers like AWS S3, Azure Blob, IBM-COS, etc",
-  "Initiated the introduction of AWS Marketplace SaaS Subscription Services as another one of our integrated product offerings",
-];
+  'Targeted monitoring/observability into backend systems via instrumentation of Prometheus clients to emit OpenMetrics'
+  , 'Implemented & modularized archiving functionality to various storage providers like AWS S3, Azure Blob, IBM-COS, etc'
+  , 'Initiated the introduction of AWS Marketplace SaaS Subscription Services as another one of our integrated product offerings'
+,]
 const intern_2017 = [
-  "Revamped an internal dashboard showcasing relevant sales metrics like churns, conversions, revenue breakdowns, etc",
-  "Engineered a proof of concept for lead generation leveraging Clearbit's API to grab relevant business contacts & data",
-  "Created cron|batch jobs to automate certain tasks on a regular basis",
-];
+  'Revamped an internal dashboard showcasing relevant sales metrics like churns, conversions, revenue breakdowns, etc'
+  , "Engineered a proof of concept for lead generation leveraging Clearbit's API to grab relevant business contacts & data"
+  , 'Created cron|batch jobs to automate certain tasks on a regular basis'
+,]
 const nea_2016 = [
-  "Assisted in maintaining network integrity/reliability across campus using a ticketing system (ServiceNow)",
-  "Conducted WiFi surveys, repaired hardwired connections, installed & troubleshooted network switches, etc",
-  "Trained in network/security fundamentals such as the TCP/IP|OSI models, SSL/TLS protocols, etc",
-];
+  'Assisted in maintaining network integrity/reliability across campus using a ticketing system (ServiceNow)'
+  , 'Conducted WiFi surveys, repaired hardwired connections, installed & troubleshooted network switches, etc'
+  , 'Trained in network/security fundamentals such as the TCP/IP|OSI models, SSL/TLS protocols, etc'
+,]
 ---
 
 <BaseLayout title="Experience">

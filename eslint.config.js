@@ -1,4 +1,5 @@
 import globals from 'globals'
+import astro from 'eslint-plugin-astro'
 import js from '@eslint/js'
 import ts from 'typescript-eslint'
 
@@ -16,10 +17,12 @@ const RULES_JS = {
     avoidEscape: true
   , allowTemplateLiterals: true
   }]
+, 'quote-props': ['error', 'consistent-as-needed']
 , 'semi': ['error', 'never']
+, 'astro/semi': ['error', 'never']
 }
 
-const common_js = createFileTypeConfig('**/*.{js,cjs}')
+const common_js = createFileTypeConfig('**/*.{js,cjs,astro}')
 const module_js = createFileTypeConfig('**/*.{mjs,ts}')
 const tailwind = createFileTypeConfig('**/tailwind.config.cjs')
 
@@ -39,6 +42,7 @@ export default [
 , {...tailwind}
 , js.configs.recommended
 , ...ts.configs.recommended
+, ...astro.configs.recommended
 ]
 
 function createFileTypeConfig(files) {
@@ -47,24 +51,19 @@ function createFileTypeConfig(files) {
   , ignores: ASTRO_IGNORE
   , rules: RULES_JS
   }
-  // // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // const {ignores, ...rest} = common
 
   switch (files) {
-    case '**/*.{js,cjs}':
-      return {
-        ...common
+    case '**/*.{js,cjs,astro}': return {
+      ...common
       , languageOptions: {globals: {...browser}}
-      }
-    case '**/*.{mjs,ts}':
-      return {
-        ...common
-      , languageOptions: {sourceType: 'module'}
-      }
-    case '**/tailwind.config.cjs':
-      return {
-        ...common
-      , languageOptions: {globals: {...node}}
-      }
+    }
+    case '**/*.{mjs,ts}': return {
+      ...common
+    , languageOptions: {sourceType: 'module'}
+    }
+    case '**/tailwind.config.cjs': return {
+      ...common
+    , languageOptions: {globals: {...node}}
+    }
   }
 }
