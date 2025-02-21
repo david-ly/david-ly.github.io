@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout title="Monitor Test">
+  <div class="flex flex-col gap-4">
+    <h1 class="text-3xl font-bold">Monitor Test Tool</h1>
+
+    <!-- Instructions -->
+    <div id="instructions" class="text-lg mb-4">
+      Click any color block to view it in fullscreen. While in fullscreen:
+      <ul class="list-disc list-inside pl-4 mt-2">
+        <li>Press <kbd class="px-2 py-1 bg-base-300 rounded">Space</kbd> to cycle colors</li>
+        <li>Press <kbd class="px-2 py-1 bg-base-300 rounded">Esc</kbd> to exit</li>
+      </ul>
+    </div>
+
+    <!-- Fullscreen message (hidden by default) -->
+    <div
+      id="fullscreen-text"
+      class="fixed top-4 left-1/2 -translate-x-1/2 text-xl font-bold hidden"
+    >
+      Press SPACE to cycle colors | ESC to exit
+    </div>
+
+    <!-- Color blocks -->
+    <div class="grid grid-cols-3 gap-2">
+      <button class="h-32 w-full bg-[#FF0000] text-white" id="red">Red</button>
+      <button class="h-32 w-full bg-[#00FF00]" id="green">Green</button>
+      <button class="h-32 w-full bg-[#0000FF] text-white" id="blue">Blue</button>
+    </div>
+
+    <!-- Rest of your existing code... -->
+  </div>
+</BaseLayout>
+
+<script>
+  const colors = ['#FFFFFF', '#000000', '#FF0000', '#00FF00', '#0000FF']
+let currentColorIndex = 0
+  const fullscreenText = document.getElementById('fullscreen-text')
+
+// Modify color blocks to trigger fullscreen
+document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().then(() => {
+          document.body.style.backgroundColor = btn.style.backgroundColor
+          if (fullscreenText) fullscreenText.classList.remove('hidden')
+        })
+      }
+    })
+  })
+
+  // Hide instructions when exiting fullscreen
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement && fullscreenText) {
+      fullscreenText.classList.add('hidden')
+    }
+  })
+
+  document.getElementById('fullscreen')?.addEventListener('click', () => {
+    const elem = document.documentElement
+
+  if (!document.fullscreenElement) {
+      elem.requestFullscreen().then(() => {
+        document.body.style.backgroundColor = colors[currentColorIndex]
+    })
+    } else {
+      document.exitFullscreen()
+  }
+  })
+
+// Cycle colors in fullscreen
+document.addEventListener('keydown', (e) => {
+    if (document.fullscreenElement && e.code === 'Space') {
+      currentColorIndex = (currentColorIndex + 1) % colors.length
+    document.body.style.backgroundColor = colors[currentColorIndex]
+  }
+  })
+
+  // Your existing keydown handler...
+</script>
+
+<style>
+  #fullscreen-text {
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+</style>
