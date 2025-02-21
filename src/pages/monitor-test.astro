@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout title="Monitor Test">
+  <div class="flex flex-col gap-6 p-4">
+    <h1 class="text-3xl font-bold">Monitor Color Test</h1>
+
+    <!-- Instructions -->
+    <div class="prose mb-8">
+      <h2 class="text-xl">Instructions</h2>
+      <ul class="list-disc pl-4">
+        <li>Click the button below to start the color test</li>
+        <li>Press <kbd class="px-2 py-0.5 rounded bg-base-300">Space</kbd> to cycle colors</li>
+      </ul>
+      <p class="mt-4 text-sm">Colors cycle through: White → Black → Red → Green → Blue</p>
+    </div>
+
+    <!-- Control button -->
+    <button class="w-full h-32 rounded-lg shadow-lg hover:scale-[102%] transition-transform border-2 border-dashed border-base-300">
+      Click to start test
+    </button>
+  </div>
+</BaseLayout>
+
+<script>
+  const colors = ['#000000', '#FF0000', '#00FF00', '#0000FF']
+  let color_idx = 0
+  const button = document.querySelector('button')
+
+  // Handle button click
+  button?.addEventListener('click', () => {
+    document.documentElement.style.setProperty('--test-color', colors[color_idx])
+  })
+
+  // Handle keyboard events
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Space') {
+      color_idx = (color_idx + 1) % colors.length
+      document.documentElement.style.setProperty('--test-color', colors[color_idx])
+    }
+  })
+</script>
+
+<!-- <style>
+  :global(html) {
+    background-color: var(--test-color, inherit) !important;
+  }
+
+  :global([data-theme]) {
+    background-color: var(--test-color, inherit) !important;
+  }
+</style> -->
+<style>
+  :global(html) {
+    --b1: none !important; /* Reset DaisyUI base color */
+    --tw-bg-opacity: 1 !important; /* Force full opacity */
+    background: var(--test-color) !important; /* Use background shorthand */
+  }
+
+  :global([data-theme]) {
+    --b1: none !important;
+    background: var(--test-color) !important;
+  }
+
+  /* Target the specific class */
+  :global(.bg-base-100) {
+    background-color: var(--test-color) !important;
+  }
+</style>
