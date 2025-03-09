@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import MonitorCalibration from '../components/calibration/MonitorCalibration.tsx'
+---
+
+<BaseLayout title="Monitor Calibration Tool">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <MonitorCalibration client:only="react" />
+</BaseLayout>
