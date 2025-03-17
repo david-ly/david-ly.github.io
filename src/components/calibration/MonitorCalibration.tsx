@@ -35,23 +35,27 @@ export default function MonitorCalibration() {
   const CurrentTestComponent = tests[cur_test].component;
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full max-w-full">
       <div className="mb-5">
         <div className="text-3xl w-full font-bold">Monitor Calibration Tool</div>
       </div>
 
-      <div>
+      <div className="w-full">
         <div className="text-center text-lg sm:text-xl font-semibold mx-2">
           {tests[cur_test].name}
         </div>
       </div>
 
-      <div className="mb-4">
+      {/* Fixed height container for instructions */}
+      <div className="h-[75px]">
         <p className="text-lg">{tests[cur_test].instructions}</p>
       </div>
 
-      <div className="w-full aspect-video border rounded-lg">
-        <div className="w-full h-full"><CurrentTestComponent /></div>
+      {/* Fixed size container for test component */}
+      <div className="w-full h-[500px] border rounded-lg">
+        <div className="w-full h-full">
+          <CurrentTestComponent />
+        </div>
       </div>
 
       <div className="flex justify-center mt-6">
