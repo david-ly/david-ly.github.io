@@ -8,40 +8,41 @@ import HorizontalCard from '../components/HorizontalCard.astro'
 // );
 
 // const last_posts = posts.slice(0, 3);
-const link_ul = 'font-semibold underline'
-const link_it = 'font-semibold italic'
-const astro = 'https://astro.build'
-const ghurl = 'https://github.com/david-ly/david-ly.github.io'
-const gdomain = 'https://domains.google'
-const creatwt = 'https://twitter.com/manuelernestog'
-const paylink = 'https://manuelernestog.github.io/paylink'
+const LINK_UL = 'font-semibold underline'
+const LINK_IT = 'font-semibold italic'
+const ASTRO = 'https://astro.build'
+const GHURL = 'https://github.com/david-ly/david-ly.github.io'
+const SQSPACE = 'https://domains.squarespace.com'
+const CREATOR = 'https://twitter.com/manuelernestog'
+const PAYLINK = 'https://manuelernestog.github.io/paylink'
+const ASTROFY = 'https://github.com/manuelernestog/astrofy'
 ---
 
 <BaseLayout>
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
     <div class="text-5xl font-bold">I'm David Ly</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer</div>
+    <div class="text-3xl py-3 font-semibold">Technical Generalist</div>
     <div class="py-2">
       <text class="text-base">
         I manage this website mostly as a repository of relevant information
-        pertaining to myself. It is built using <a class={link_ul} href={astro}
+        pertaining to myself. It is built using <a class={LINK_UL} href={ASTRO}
           >Astro</a
-        >, hosted on <a class={link_ul} href={ghurl}>GitHub Pages</a>, and
+        >, hosted on <a class={LINK_UL} href={GHURL}>GitHub Pages</a>, and
         configured under a custom domain registered via <a
-          class={link_ul}
-          href={gdomain}>Google Domains</a
-        >. Credits to <a class={link_it} href={creatwt}> @manuelernestog </a> for
+          class={LINK_UL}
+          href={SQSPACE}>Squarespace</a
+        >. Credits to <a class={LINK_IT} href={CREATOR}> @manuelernestog </a> for
         the template which I adapted my site from, you can navigate to the project's
         GitHub page using the button below and financially support his work <a
-          class={link_ul}
-          href={paylink}>here</a
+          class={LINK_UL}
+          href={PAYLINK}>here</a
         >.
       </text>
     </div>
-    <div class="mt-8">
+    <div class="mt-4">
       <a
-        href="https://github.com/manuelernestog/astro-modern-personal-website"
+        href={ASTROFY}
         target="_blank"
         class="btn btn-outline ml-5"
       >
@@ -67,7 +68,7 @@ const paylink = 'https://manuelernestog.github.io/paylink'
   <HorizontalCard
     title="ANSI Rendered JSON Resume/CV"
     img="/ancv_example.png"
-    desc="Personalized CV (Curriculum Vitae) following the JSON resume schema [jsonresume.org] and built to be rendered based on the [ancv.io] project. Try it out for yourself by running `curl -L https://ancv.io/david-ly`"
+    desc="Personalized CV (Curriculum Vitae) following the JSON resume schema [jsonresume.org] and rendered based on the [github.com/alexpovel/ancv] project."
     url="https://gist.github.com/david-ly/2add5c03b85b3e07d0d2dc9172462af1"
     badge="FOSS"
   />
