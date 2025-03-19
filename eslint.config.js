@@ -20,10 +20,13 @@ const RULES_JS = {
 , 'quote-props': ['error', 'consistent-as-needed']
 , 'semi': ['error', 'never']
 , 'astro/semi': ['error', 'never']
+, 'object-curly-spacing': ['error', 'never']
+, 'array-bracket-spacing': ['error', 'never']
+, 'computed-property-spacing': ['error', 'never']
 }
 
 const common_js = createFileTypeConfig('**/*.{js,cjs,astro}')
-const module_js = createFileTypeConfig('**/*.{mjs,ts}')
+const module_js = createFileTypeConfig('**/*.{mjs,ts,tsx}')
 const tailwind = createFileTypeConfig('**/tailwind.config.cjs')
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -57,7 +60,7 @@ function createFileTypeConfig(files) {
       ...common
       , languageOptions: {globals: {...browser}}
     }
-    case '**/*.{mjs,ts}': return {
+    case '**/*.{mjs,ts,tsx}': return {
       ...common
     , languageOptions: {sourceType: 'module'}
     }

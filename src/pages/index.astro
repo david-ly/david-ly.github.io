@@ -8,14 +8,7 @@ import HorizontalCard from '../components/HorizontalCard.astro'
 // );
 
 // const last_posts = posts.slice(0, 3);
-const LINK_UL = 'font-semibold underline'
-const LINK_IT = 'font-semibold italic'
-const ASTRO = 'https://astro.build'
-const GHURL = 'https://github.com/david-ly/david-ly.github.io'
-const SQSPACE = 'https://domains.squarespace.com'
-const CREATOR = 'https://twitter.com/manuelernestog'
-const PAYLINK = 'https://manuelernestog.github.io/paylink'
-const ASTROFY = 'https://github.com/manuelernestog/astrofy'
+import {LINK_UL, LINK_IT, ASTRO, GHURL, SQSPACE, CREATOR, PAYLINK, ASTROFY} from '../config.ts'
 ---
 
 <BaseLayout>
@@ -26,26 +19,17 @@ const ASTROFY = 'https://github.com/manuelernestog/astrofy'
     <div class="py-2">
       <text class="text-base">
         I manage this website mostly as a repository of relevant information
-        pertaining to myself. It is built using <a class={LINK_UL} href={ASTRO}
-          >Astro</a
-        >, hosted on <a class={LINK_UL} href={GHURL}>GitHub Pages</a>, and
-        configured under a custom domain registered via <a
-          class={LINK_UL}
-          href={SQSPACE}>Squarespace</a
-        >. Credits to <a class={LINK_IT} href={CREATOR}> @manuelernestog </a> for
-        the template which I adapted my site from, you can navigate to the project's
-        GitHub page using the button below and financially support his work <a
-          class={LINK_UL}
-          href={PAYLINK}>here</a
-        >.
+        pertaining to myself. It is built using{' '}
+        <a class={LINK_UL} href={ASTRO}>Astro</a>, hosted on{' '}
+        <a class={LINK_UL} href={GHURL}>GitHub Pages</a>, and configured under a custom domain registered via{' '}
+        <a class={LINK_UL} href={SQSPACE}>Squarespace</a>. Credits to{' '}
+        <a class={LINK_IT} href={CREATOR}>@manuelernestog</a> for the template which I adapted my site from, you can navigate to the project's
+        GitHub page using the button below and financially support his work{' '}
+        <a class={LINK_UL} href={PAYLINK}>here</a>.
       </text>
     </div>
     <div class="mt-4">
-      <a
-        href={ASTROFY}
-        target="_blank"
-        class="btn btn-outline ml-5"
-      >
+      <a href={ASTROFY} target="_blank" class="btn btn-outline ml-5">
         Get This Template
       </a>
     </div>
@@ -64,6 +48,13 @@ const ASTROFY = 'https://github.com/manuelernestog/astrofy'
     url="https://davidmacly.dev/terminal-portfolio"
     badge="WIP"
   /> -->
+  <HorizontalCard
+  title="Monitor Calibration Tool"
+  img="/monitor_calibration.png"
+  desc="Inspired by weekly I/O checks done in my current role as an Arcade Tech to test the gamut of a given monitor/screen's functionality. Scaffolded using v0(.dev) and further built out/integrated with help from (GitHub) Copilot & Cursor using Claude 3.7 Sonnet."
+  url="/monitor-calibration"
+  badge="FOSS"
+  />
   <div class="divider my-0"></div>
   <HorizontalCard
     title="ANSI Rendered JSON Resume/CV"
