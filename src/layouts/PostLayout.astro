@@ -1,15 +1,21 @@
 ---
 import type {BlogSchema} from '../content/config'
 import BaseLayout from './BaseLayout.astro'
-import dayjs from 'dayjs'
-import localizedFormat from 'dayjs/plugin/localizedFormat'
 
 // export interface Props extends BlogSchema {}
 export type Props = BlogSchema
 
 const {title, description, pub_date, updated_date, hero_image} = Astro.props
-dayjs.extend(localizedFormat)
-const display_date = dayjs(pub_date).format('ll')
+const display_date = formatDate(pub_date)
+
+function formatDate(date: Date) {
+  if (!date) return '';
+  return new Intl.DateTimeFormat('en', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  }).format(new Date(date));
+}
 ---
 
 <BaseLayout title={title} description={description} image={hero_image}>

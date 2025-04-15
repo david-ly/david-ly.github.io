@@ -1,6 +1,6 @@
 {
   "name": "david-ly-github-io",
-  "description": "Portfolio adapted from the Astro Modern Personal Website template created by Manuel Ernestog w/ Project Section, CV Section, Paginated Blog, Shop, RSS Feed, SEO Optimization, Visual Themes and Responsive Design.",
+  "description": "Portfolio adapted from the Astrofy Personal Portfolio template created by Manuel Ernestog with CV/Projects Section(s), Paginated Blog, RSS Feed, Shop/Store, and SEO Optimization.",
   "type": "module",
   "version": "2.1.1",
   "scripts": {
@@ -10,6 +10,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "pretest": "npm run lint"
   },
   "dependencies": {
@@ -20,7 +21,6 @@
     "@astrojs/tailwind": "^6.0.0",
     "astro": "^5.3.0",
     "daisyui": "^2.52.0",
-    "dayjs": "^1.11.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
