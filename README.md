@@ -1,12 +1,13 @@
 # Personal Portfolio Website
 
-Adapted from [@manuelernestog](https://twitter.com/manuelernestog)'s [Astro Modern Personal Website](https://github.com/manuelernestog/astro-modern-personal-website) template and tailored with personalized information. My site (<https://davidmacly.dev>) is hosted on GitHub Pages in this very repository and configured with a custom domain registered via [Google Domains](https://domains.google).
+Adapted from [@manuelernestog](https://twitter.com/manuelernestog)'s [Astrofy](https://github.com/manuelernestog/astrofy) template and tailored with personalized information. My site (<https://davidmacly.dev>) is hosted on GitHub Pages in this very repository and configured with a custom domain registered via [Squarespace](https://squarespace.com).
 
 ## Tech Stack
 
 - [Astro](https://astro.build)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
+- [React](https://react.dev)
 
 <!-- ## Project Structure
 
@@ -55,12 +56,12 @@ Adapted from [@manuelernestog](https://twitter.com/manuelernestog)'s [Astro Mode
 
 ## License
 
-Astro Modern Personal Website is licensed under the MIT license — see the [LICENSE](https://github.com/manuelernestog/astro-modern-personal-website/blob/main/LICENSE) file for details.
+Astrofy is licensed under the MIT license — see the [LICENSE](https://github.com/manuelernestog/astrofy/blob/main/LICENSE) file for details.
 
 ## Contributors
 
-<a href="https://github.com/manuelernestog/astro-modern-personal-website/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=manuelernestog/astro-modern-personal-website" />
+<a href="https://github.com/manuelernestog/astrofy/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=manuelernestog/astrofy" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
