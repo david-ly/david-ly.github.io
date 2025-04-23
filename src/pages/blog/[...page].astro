@@ -12,7 +12,7 @@ export async function getStaticPaths({paginate}) {
 interface Post {
   data: {
     title: string;
-    hero_image: string;
+    hero_img: string;
     description: string;
   };
   slug: string;
@@ -36,7 +36,7 @@ const {page}: { page: Page } = Astro.props
         <>
           <HorizontalCard
             title={post.data.title}
-            img={post.data.hero_image}
+            img={post.data.hero_img}
             desc={post.data.description}
             url={'/blog/' + post.slug}
             target="_self"

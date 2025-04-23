@@ -5,7 +5,7 @@ const schema_blog = z.object({
     , description: z.string()
     , pub_date: z.coerce.date()
     , updated_date: z.string().optional()
-    , hero_image: z.string().optional(),
+    , hero_img: z.string().optional(),
 })
 
 // const storeSchema = z.object({
@@ -19,7 +19,7 @@ const schema_blog = z.object({
 //     oldPricing:  z.string().optional(),
 //     badge: z.string().optional(),
 //     checkoutUrl: z.string().optional(),
-//     hero_image: z.string().optional(),
+//     hero_img: z.string().optional(),
 // });
 
 export type BlogSchema = z.infer<typeof schema_blog>

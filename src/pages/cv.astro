@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import TimeLineElement from '../components/cv/TimeLine.astro'
 
+const r1tech_2024 = []
+const career_gap = []
 const swe2_2022 = [
   // "Drafted an agile epic (via Jira) to scope out the necessary steps to instrument a durable queue at each stage of the data pipeline",
   'Tackled the refactor of the alerting microservice (send functionality) for integrations with services like OpsGenie, PagerDuty, etc'
@@ -37,10 +39,7 @@ const nea_2016 = [
   </div>
 
   <div class="mb-10 text-justify">
-    Software Engineer with ~3 years of industry experience mainly focused on
-    web-based backend development involving distributed systems (k8s), message
-    queues, RESTful APIs, NoSQL databases, Redis (mem)caching, Elasticsearch,
-    etc
+    Technical Generalist with ~3 years of SWE industry experience mainly focused on web-based backend development involving Distributed Systems (K8s), Microservices, RESTful APIs, MongoDB, Redis, Elasticsearch, etc
   </div>
 
   <div class="mb-5">
@@ -48,6 +47,16 @@ const nea_2016 = [
   </div>
 
   <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Mechanic/Technician - Associate → Lead → Supervisor"
+      subtitle="May 2024 - Present @ Round1 Bowling & Arcade [033SLM]"
+      bullets={r1tech_2024}
+    />
+    <TimeLineElement
+      title="Career Break"
+      subtitle="Jul 2022 - May 2024"
+      bullets={career_gap}
+    />
     <TimeLineElement
       title="Software Engineer II"
       subtitle="Jan 2022 - Jun 2022 @ LogDNA (n.k.a. Mezmo)"
@@ -79,6 +88,9 @@ const nea_2016 = [
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="IT Support Program (CompTIA A+ Certification)"
+      subtitle="2024 to 2025 @ Calbright College (Online)"
     <TimeLineElement
       title="Bachelor of Arts in Cognitive Science (Computational Modeling Focus)"
       subtitle="2015 to 2019 @ University of California, Berkeley"
