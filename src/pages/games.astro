@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import ArcadeGames from '../components/ArcadeGames.tsx'
+import { games } from '../content/games'
+---
+
+<BaseLayout title="Arcade & Redemption Games">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Games I've Worked On</div>
+  </div>
+  <div class="mb-10 text-justify">
+    As an arcade technician, I've worked on a wide variety of arcade, redemption, and music games. Below is a searchable list of the machines I've maintained, repaired, or supported in my current role.
+  </div>
+  <ArcadeGames client:only="react" games={games} />
+</BaseLayout> 
