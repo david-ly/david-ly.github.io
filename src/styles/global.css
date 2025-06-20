@@ -1,7 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Load Tailwind itself */
+@import "tailwindcss";
 
-.time-line-container>div:last-child .education__time>.education__line {
-    display: none;
+/* First‑party plugins */
+/* @plugin "@tailwindcss/typography"; */
+
+/* DaisyUI 5 with config */
+@plugin "daisyui" {
+  /* All built‑in themes, default = light, dark on prefers‑dark */
+  themes: light --default, dark --prefersdark, all;
+  /* or just:  themes: all; */
+  logs: false;
 }
