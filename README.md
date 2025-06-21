@@ -5,9 +5,9 @@ Adapted from [@manuelernestog](https://twitter.com/manuelernestog)'s [Astrofy](h
 ## Tech Stack
 
 - [Astro](https://astro.build)
-- [Tailwind CSS](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 - [React](https://react.dev)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 <!-- ## Project Structure
 

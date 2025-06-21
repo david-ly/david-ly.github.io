@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 /* First‑party plugins */
-/* @plugin "@tailwindcss/typography"; */
+@plugin "@tailwindcss/typography";
 
 /* DaisyUI 5 with config */
 @plugin "daisyui" {

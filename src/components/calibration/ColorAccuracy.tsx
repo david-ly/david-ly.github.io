@@ -21,7 +21,7 @@ export default function ColorAccuracy() {
   return (
     <div className="w-full h-full select-none relative">
       <div
-        className="w-full h-full flex items-center justify-center text-3xl font-bold cursor-pointer"
+        className="w-full h-full flex items-center justify-center text-black text-3xl font-bold cursor-pointer"
         style={{backgroundColor: COLORS[cur_col]}}
         onClick={nextColor}
         role="button"
@@ -29,10 +29,6 @@ export default function ColorAccuracy() {
         aria-label={`Current color: ${COLORS[cur_col]}. Click to change color`}
       >
         {COLORS[cur_col]}
-      </div>
-
-      <div className="absolute bottom-4 left-0 right-0 text-center text-lg">
-        Click on the color or press <kbd className="px-2 py-1 bg-gray-100 border border-gray-300 rounded">SPACE</kbd> to cycle through colors
       </div>
     </div>
   )
