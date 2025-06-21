@@ -2,19 +2,18 @@
 import type {BlogSchema} from '../content/config'
 import BaseLayout from './BaseLayout.astro'
 
-// export interface Props extends BlogSchema {}
 export type Props = BlogSchema
 
-const {title, description, pub_date, updated_date, hero_img} = Astro.props
+const {title, description, pub_date, hero_img} = Astro.props
 const display_date = formatDate(pub_date)
 
 function formatDate(date: Date) {
-  if (!date) return '';
+  if (!date) return ''
   return new Intl.DateTimeFormat('en', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  }).format(new Date(date));
+    year: 'numeric'
+  , month: 'short'
+  , day: 'numeric'
+  }).format(new Date(date))
 }
 ---
 
@@ -24,14 +23,6 @@ function formatDate(date: Date) {
       {hero_img && <img src={hero_img} alt={title} class="w-full mb-6" />}
       <h1 class="title my-2 text-4xl font-bold">{title}</h1>
       {pub_date && <time>{display_date}</time>}
-      {
-        updated_date && (
-          <div>
-            {' '}
-            Last updated on <time>{updated_date}</time>{' '}
-          </div>
-        )
-      }
       <div class="divider my-2"></div>
       <slot />
     </article>

@@ -8,5 +8,5 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   site: 'https://davidmacly.dev'
 , integrations: [mdx(), sitemap(), react()]
-, vite: { plugins: [tailwindcss()] }
+, vite: {plugins: [tailwindcss()]}
 })

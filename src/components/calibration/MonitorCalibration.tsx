@@ -8,12 +8,12 @@ const tests = [
   {
     name: 'Color Accuracy'
   , component: ColorAccuracy
-  , instructions: 'Observe each color for accuracy and uniformity.'
+  , instructions: <>Observe each color for accuracy and uniformity. Click on the color or press <kbd className="px-1 py-1 bg-base-100 border rounded text-white">SPACE</kbd> to cycle through colors.</>
   }
 , {
     name: 'Dead Pixel Test'
   , component: DeadPixelTest
-  , instructions: 'Look for any pixels that don\'t change or remain stuck as the pattern changes. Pay attention to both the background & crosshatch.'
+  , instructions: 'Look for any pixels in the background/crosshatch that don\'t change or remain stuck as the pattern changes'
   }
 , {
     name: 'Brightness/Contrast'
@@ -23,7 +23,7 @@ const tests = [
 , {
     name: 'Scrolling Pattern'
   , component: ScrollingPattern
-  , instructions: 'Observe the scrolling bars for smooth motion and color transitions. If you see stuttering, blurring, or color banding, it may indicate issues with your display\'s refresh rate, response time, or color reproduction.'
+  , instructions: 'Watch the scrolling bars to monitor for smooth motion and color transitions.'
   }
 ]
 
@@ -38,23 +38,19 @@ export default function MonitorCalibration() {
         <div className="text-3xl w-full font-bold justify-center">Monitor Calibration Tool</div>
       </div>
 
-      <div className="w-full">
-        <div className="text-center text-lg sm:text-xl font-semibold mx-2">
-          {tests[cur_test].name}
-        </div>
+      <div className="text-center text-2xl font-semibold mx-2">
+        {tests[cur_test].name}
       </div>
 
-      <div className="h-[75px] w-full">
-        <p className="flex items-center justify-center text-lg">{tests[cur_test].instructions}</p>
+      <div className="w-full mb-2 sm:mb-4 md:mb-6 flex-shrink-0">
+        <p className="text-center text-lg">{tests[cur_test].instructions}</p>
       </div>
 
-      <div className="w-full h-[500px] max-w-[1200px] border rounded-lg overflow-hidden">
-        <div className="w-full h-full">
-          <CurrentTestComponent />
-        </div>
+      <div className="h-[70vh] w-full border rounded-lg mb-4 sm:mb-6 md:mb-8">
+        <CurrentTestComponent />
       </div>
 
-      <div className="flex justify-center mt-6">
+      <div className="mt-4 flex-shrink-0">
         <button onClick={nextTest} className="btn btn-outline">
           Next Test
         </button>
