@@ -1,15 +1,15 @@
 ---
+import {games} from '../content/games'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import ArcadeCabs from '../components/ArcadeCabs.tsx'
-import {games} from '../content/games'
 ---
 
-<BaseLayout title="Arcade Cabinets/Games">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">(Game) Cabs/Machines I've Worked On</div>
+<BaseLayout title='Arcade Cabinets/Games'>
+  <div class='mb-5'>
+    <div class='text-3xl w-full font-bold'>(Game) Cabs/Machines I've Worked On</div>
   </div>
-  <div class="mb-10 text-justify">
+  <div class='mb-10 text-justify'>
     As an arcade technician, I've worked on a wide variety of arcade cabinets encompassing classic video games and machines with distinct amusement purposes such as carnival games, (loco)motion simulations, photobooths, pinball, prize cranes, racing, shooters, redemption, VR experiences, and so on. Below is a sortable/searchable list of the cabinets I've maintained, repaired, or supported in my current role.
   </div>
-  <ArcadeCabs client:only="react" games={games} />
+  <ArcadeCabs client:only='react' games={games} />
 </BaseLayout>

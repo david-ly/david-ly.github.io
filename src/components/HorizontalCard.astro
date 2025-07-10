@@ -2,18 +2,18 @@
 const {badge, desc, img, tags, target, title, url} = Astro.props
 ---
 
-<div class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[105%]">
-  <a href={url} target={target}>
-    <div class="hero-content flex-col md:flex-row">
-      {img && <img src={img} alt={title} class="max-w-full md:max-w-[13rem] rounded-lg" />}
-      <div class="grow w-full">
-        <h1 class="text-xl font-bold">
+<div class='rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[105%]'>
+  <a data-astro-prefetch href={url} target={target}>
+    <div class='hero-content flex-col md:flex-row'>
+      {img && <img src={img} alt={title} class='max-w-full md:max-w-[13rem] rounded-lg' />}
+      <div class='grow w-full'>
+        <h1 class='text-xl font-bold'>
           {title}
-          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+          {badge && <div class='badge badge-secondary mx-2'>{badge}</div>}
         </h1>
-        <p class="py-1 text-1xl">{desc}</p>
-        <div class="card-actions justify-end">
-          {tags && tags.map((tag: string) => <div class="badge badge-outline">{tag}</div>)}
+        <p class='py-1 text-1xl'>{desc}</p>
+        <div class='card-actions justify-end'>
+          {tags?.map((tag: string) => <div class='badge-outline'>{tag}</div>)}
         </div>
       </div>
     </div>

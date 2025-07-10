@@ -10,12 +10,12 @@ const POSTS = (await getCollection('blog')).sort(
 ---
 
 <BaseLayout>
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm David Ly</div>
-    <div class="text-3xl py-3 font-semibold">Technical Generalist</div>
-    <div class="py-2">
-      <text class="text-base">
+  <div class='pb-12 mt-5'>
+    <div class='text-xl py-1'>Hey there 👋</div>
+    <div class='text-5xl font-bold'>I'm David Ly</div>
+    <div class='text-3xl py-3 font-semibold'>Technical Generalist</div>
+    <div class='py-2'>
+      <text class='text-base'>
         I manage this website mostly as a repository of relevant information
         pertaining to myself. It is built using{' '}
         <a class={LINK_UL} href={ASTRO}>Astro</a>, hosted on{' '}
@@ -26,49 +26,49 @@ const POSTS = (await getCollection('blog')).sort(
         <a class={LINK_UL} href={PAYLINK}>here</a>.
       </text>
     </div>
-    <div class="mt-4">
-      <a href={ASTROFY} target="_blank" class="btn btn-outline ml-5">
+    <div class='mt-4'>
+      <a href={ASTROFY} target='_blank' class='btn btn-outline ml-5'>
         Get This Template
       </a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">
+    <div class='text-3xl w-full font-bold mb-2'>
       {'<'}Portfolio Projects{'/>'}
     </div>
   </div>
 
   <HorizontalCard
-    badge="FOSS"
-    desc="Template for creating `.inf` installer files for custom cursor schemes/themes on Windows. No batteries (cursor state files) included but installation/customization instructions are provided via comments."
-    img="/win-cursor-scheme-inf-template.png"
-    target="_blank"
-    title="Windows Cursor Scheme/Theme `.inf` File"
-    url="https://gist.github.com/david-ly/687922256a5c6a7b7b98a52980a984a1"
+    badge='FOSS'
+    desc='Template for creating `.inf` installer files for custom cursor schemes/themes on Windows. No batteries (cursor state files) included but installation/customization instructions are provided via comments.'
+    img='/win-cursor-scheme-inf-template.png'
+    target='_blank'
+    title='Windows Cursor Scheme/Theme `.inf` File'
+    url='https://gist.github.com/david-ly/687922256a5c6a7b7b98a52980a984a1'
   />
-  <div class="divider my-0"></div>
+  <div class='divider my-0'></div>
   <HorizontalCard
-    badge="FOSS"
-    desc="Inspired by weekly I/O checks done in my current role as an Arcade Tech to test the gamut of a given monitor/screen's functionality. Scaffolded using v0(.dev) and further built out/integrated with help from (GitHub) Copilot & Cursor using Claude 3.7 Sonnet."
-    img="/monitor_calibration.png"
-    target="_self"
-    title="Monitor Calibration Tool"
-    url="/monitor-calibration"
+    badge='FOSS'
+    desc='Inspired by weekly I/O checks done in my current role as an Arcade Tech to test the gamut of a given monitor/screen's functionality. Scaffolded using v0(.dev) and further built out/integrated with help from (GitHub) Copilot & Cursor using Claude 3.7 Sonnet.'
+    img='/monitor_calibration.png'
+    target='_self'
+    title='Monitor Calibration Tool'
+    url='/monitor-calibration'
   />
-  <div class="divider my-0"></div>
+  <div class='divider my-0'></div>
   <!-- TODO: Update -->
   <HorizontalCard
-    badge="FOSS"
-    desc="Personalized CV (Curriculum Vitae) following the JSON resume schema [jsonresume.org] and rendered based on the [github.com/alexpovel/ancv] project. Try it for yourself by running `curl -S https://ancv.povel.dev/david-ly` in your terminal."
-    img="/ancv_example.png"
-    target="_blank"
-    title="ANSI Rendered JSON Resume/CV"
-    url="https://gist.github.com/david-ly/2add5c03b85b3e07d0d2dc9172462af1"
+    badge='FOSS'
+    desc='Personalized CV (Curriculum Vitae) following the JSON resume schema [jsonresume.org] and rendered based on the [github.com/alexpovel/ancv] project. Try it for yourself by running `curl -S https://ancv.povel.dev/david-ly` in your terminal.'
+    img='/ancv_example.png'
+    target='_blank'
+    title='ANSI Rendered JSON Resume/CV'
+    url='https://gist.github.com/david-ly/2add5c03b85b3e07d0d2dc9172462af1'
   />
 
   <div>
-      <div class="text-3xl w-full font-bold mb-5 mt-10">Blog Posts</div>
+      <div class='text-3xl w-full font-bold mb-5 mt-10'>Blog Posts</div>
     </div>
 
     {
@@ -78,9 +78,9 @@ const POSTS = (await getCollection('blog')).sort(
           img={post.data.hero_img}
           desc={post.data.description}
           url={'/blog/' + post.slug}
-          target="_self"
+          target='_self'
         />
-        <div class="divider my-0"></div>
+        <div class='divider my-0'></div>
       ))
     }
 </BaseLayout>
