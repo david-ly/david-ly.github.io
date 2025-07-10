@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useMemo, useState} from 'react'
 
 type Game = {
   description?: string;
@@ -26,14 +26,17 @@ const ArcadeCabs: React.FC<ArcadeCabsProps> = ({games}) => {
   const [sort, setSort] = useState<SortKey>('name')
   const [order, setOrder] = useState<SortOrder>('asc')
 
-  const filtered = games.filter((game) => filterSearchTerm(game, search))
-  filtered.sort((a, b) => {
-    const initial = a[sort].localeCompare(b[sort])
-    // break any "ties" via name (ascending order) by default
-    if (initial === 0) return a.name.localeCompare(b.name)
+  const rendered = useMemo(() => {
+    const filtered = games.filter((game) => filterSearchTerm(game, search))
+    filtered.sort((a, b) => {
+      const initial = a[sort].localeCompare(b[sort])
+      // break any "ties" via name (ascending order) by default
+      if (initial === 0) return a.name.localeCompare(b.name)
 
-    return order === 'asc' ? initial : -initial
-  })
+      return order === 'asc' ? initial : -initial
+    })
+    return filtered
+  }, [games, search, sort, order])
 
   const sortByTerm = (term: SortKey) => {
     if (sort === term) { // subsequent/repetitive click(s)
@@ -63,14 +66,16 @@ const ArcadeCabs: React.FC<ArcadeCabsProps> = ({games}) => {
         <table className="table table-zebra w-full">
           <thead>
             <tr>
-              {SORT_COLS.map((col) => (<th>
+              {SORT_COLS.map((col) => (<th key={col.key}>
                 <button {...btnHeadingAttrs(col.key)}>{col.label}</button>
               </th>))}
             </tr>
           </thead>
           <tbody>
-            {filtered.map((game) => (<tr>
-              {SORT_COLS.map(col => <td>{game[col.key]}</td>)}
+            {rendered.map((game) => (<tr key={game.name}>
+              {SORT_COLS.map(col => <td key={`${game.name}-${col.key}`}>
+                {game[col.key]}
+              </td>)}
             </tr>))}
           </tbody>
         </table>
