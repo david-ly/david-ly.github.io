@@ -372,6 +372,12 @@ export const games = [
   , secondary: 'N/A'
   }
 , {
+    name: 'Godzilla Kaiju Drop'
+  , manufacturer: 'UNIS'
+  , primary: 'Coin Pusher'
+  , secondary: 'Redemption'
+  }
+, {
     name: 'Godzilla Kaiju Wars'
   , manufacturer: 'Raw Thrills'
   , primary: 'VR'
@@ -450,6 +456,12 @@ export const games = [
   , secondary: 'Redemption'
   }
 , {
+    name: 'ICEE Slush Rush'
+  , manufacturer: 'BayTek'
+  , primary: 'Redemption'
+  , secondary: 'N/A'
+  }
+, {
     name: 'Initial D8'
   , manufacturer: 'SEGA'
   , primary: 'Racing'
@@ -471,7 +483,7 @@ export const games = [
     name: "Jumbo Jumpin'"
   , manufacturer: 'Namco'
   , primary: 'Sports'
-  , secondary: 'N/A'
+  , secondary: 'Redemption'
   }
 , {
     name: 'Jurassic Park Arcade'
