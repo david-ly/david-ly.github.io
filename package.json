@@ -14,7 +14,7 @@
     "pretest": "npm run lint"
   },
   "dependencies": {
-    "@astrojs/react": "^4.3.0",
+    "@astrojs/react": "^4.4.2",
     "astro": "^5.16.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.3"
