@@ -20,7 +20,7 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/mdx": "^5.0.2",
     "@astrojs/rss": "^4.0.17",
     "@astrojs/sitemap": "^3.7.1",
     "@eslint/js": "^9.29.0",
