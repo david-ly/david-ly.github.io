@@ -14,13 +14,13 @@
     "pretest": "npm run lint"
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.2",
-    "astro": "^6.3.3",
+    "@astrojs/react": "^6.0.0",
+    "astro": "^7.0.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^5.0.2",
+    "@astrojs/mdx": "^7.0.0",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.1",
     "@eslint/js": "^10.0.1",
