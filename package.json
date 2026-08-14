@@ -15,19 +15,19 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
-    "astro": "^6.3.3",
+    "astro": "^7.2.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^5.0.2",
+    "@astrojs/mdx": "^7.0.5",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.1",
     "@eslint/js": "^10.0.1",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
     "daisyui": "^5.5.14",
-    "eslint": "^9.39.2",
+    "eslint": "^10.8.1",
     "eslint-plugin-astro": "^1.7.0",
     "globals": "^17.6.0",
     "prettier": "^3.8.1",
