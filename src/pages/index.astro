@@ -50,7 +50,7 @@ const POSTS = (await getCollection('blog')).sort(
   <div class='divider my-0'></div>
   <HorizontalCard
     badge='FOSS'
-    desc='Inspired by weekly I/O checks done in my current role as an Arcade Tech to test the gamut of a given monitor/screen's functionality. Scaffolded using v0(.dev) and further built out/integrated with help from (GitHub) Copilot & Cursor using Claude 3.7 Sonnet.'
+    desc="Inspired by weekly I/O checks done in my current role as an Arcade Tech to test the gamut of a given monitor/screen's functionality. Scaffolded using v0(.dev) and further built out/integrated with help from (GitHub) Copilot & Cursor using Claude 3.7 Sonnet."
     img='/monitor_calibration.png'
     target='_self'
     title='Monitor Calibration Tool'
@@ -77,7 +77,7 @@ const POSTS = (await getCollection('blog')).sort(
           title={post.data.title}
           img={post.data.hero_img}
           desc={post.data.description}
-          url={'/blog/' + post.slug}
+          url={'/blog/' + post.id}
           target='_self'
         />
         <div class='divider my-0'></div>
