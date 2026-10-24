@@ -5,7 +5,7 @@ import ts from 'typescript-eslint'
 
 const {browser, node} = globals
 
-const ASTRO_IGNORE = ['.astro/*']
+const ASTRO_IGNORE = ['.astro/**']
 const RULES_ALL = {
   'eol-last': ['error', 'always']
 , 'linebreak-style': ['error', 'unix']
@@ -32,12 +32,10 @@ const tailwind = createFileTypeConfig('**/tailwind.config.cjs')
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
+    ignores: ['.astro/**', 'node_modules/**', 'dist/**']
+  }
+, {
     files: ['**/*']
-  , ignores: [
-      '.astro/*'
-    , 'node_modules/*'
-    , 'dist/*'
-    ]
   , rules: RULES_ALL
   }
 , {...common_js}
